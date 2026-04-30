@@ -26,18 +26,30 @@
 - **Time Complexity:** O(log n)
 
 ---
+## 11. Bouncing Ball Simulation
 
-## 3. Exponentiation (Alternative)
+- **File:** bouncing_ball.cpp  
+- **Aim:** To simulate a bouncing ball using recursion and calculate the total distance travelled and final height after a given number of bounces.  
 
-- **File:** exp2.cpp  
-- **Aim:** Alternative method to compute power.  
-- **Use Case:** Comparison of different exponentiation approaches.  
+- **Use Case:** Useful in physics simulations, animation systems, and recursive modeling of repeated events.  
+
+- **Approach:**
+  1. Define two recursive functions:
+     - `distance(h, r, n)` → calculates total distance travelled.
+     - `finalHeight(h, r, n)` → calculates final height after n bounces.
+  2. Each bounce reduces height by multiplying with rebound ratio `r`.
+  3. Total distance includes upward and downward movement after each bounce.
+
 - **Algorithm:**
-  1. Multiply base repeatedly.
-  2. Loop until exponent reduces to 0.
-- **Time Complexity:** O(n)
+  1. If number of bounces `n = 0`, return initial height `h`.
+  2. For distance:
+     - Add current height + twice the reduced height recursively.
+  3. For final height:
+     - Multiply height by rebound ratio recursively.
+  4. Repeat until all bounces are processed.
 
----
+- **Time Complexity:** O(n)  
+- **Space Complexity:** O(n) (due to recursion stack)
 
 ## 4. First Duplicate Finder
 
